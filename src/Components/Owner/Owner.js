@@ -33,15 +33,15 @@ const Owner = () => {
                         <label className="db fw7 mb2">Type chambre</label>
 
                         <input className="mr1" type="checkbox" id="single" value="single"></input>
-                        <label className="f4 fw7">Simple</label>
+                        <label className="f6 fw7">Simple</label>
 
                         <input className="mr1 ml5" type="checkbox" id="double" value="double"></input>
-                        <label className="f4 fw7">Double</label>
+                        <label className="f6 fw7">Double</label>
         
                         <input className="ml5" type="checkbox" id="triple" value="triple"></input>
-                        <label className="f4 fw7">Triple</label>
+                        <label className="f6 fw7">Triple</label>
                 </div>
-            <a className="db w-50 mt5 center f4 pointer shadow-5 no-underline white hover-light-red pa3 ba border-box">
+            <a className="db w-50 mt5 mb3 center f4 pointer shadow-5 no-underline white hover-light-red pa3 ba border-box">
                     <span className=""> => Souscrire</span>
             </a>
             </form>
