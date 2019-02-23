@@ -1,0 +1,15 @@
+.Searchbox {
+    min-height: 65vh;
+    height: auto;
+}
+
+
+input::placeholder {
+    color: white;
+}
+
+.search:focus {
+    outline: none;
+    border-color: #ff725c;
+}
+

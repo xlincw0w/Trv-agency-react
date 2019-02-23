@@ -1,0 +1,10 @@
+.Owner {
+    min-height: 70vh;
+    height: auto;
+}
+
+.forminp:focus {
+    outline: none;
+    border-color: #ff725c;
+}
+
