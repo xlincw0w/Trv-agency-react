@@ -1,4 +1,4 @@
-# T-Agency versions using reactjs framework
+# T-Agency version using reactjs framework
 
 
 1. Clone this repo
