@@ -4,7 +4,7 @@ import './Owner.css';
 const Owner = () => {
 
     return (
-        <div className="center tc w-75 bg-black-50 shadow-5 ba b--black">
+        <div className="mt5 center tc w-75 bg-black-50 shadow-5 ba b--black">
             <form className="pt3 Owner tc center white-80 md1">
                 <div className="pt1">
                     <label className="f5 b db mb2">Nom<span className="normal white-80"></span></label>
