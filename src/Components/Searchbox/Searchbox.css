@@ -1,9 +1,3 @@
-.Searchbox {
-    min-height: 65vh;
-    height: auto;
-}
-
-
 input::placeholder {
     color: white;
 }
@@ -13,3 +7,16 @@ input::placeholder {
     border-color: #ff725c;
 }
 
+.Searchbox {
+    margin-top: 15vh;
+}
+
+.md2 {
+    width: 50vw;
+}
+
+@media only screen and (max-width: 1000px) {
+    .md2 {
+        width: 70vw;
+    }
+} 

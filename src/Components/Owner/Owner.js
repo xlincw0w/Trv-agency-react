@@ -2,9 +2,10 @@ import React from 'react';
 import './Owner.css';
 
 const Owner = () => {
+
     return (
         <div className="center tc w-75 bg-black-50 shadow-5 ba b--black">
-            <form className="pt3 Owner w-30 tc center white-80">
+            <form className="pt3 Owner tc center white-80 md1">
                 <div className="pt1">
                     <label className="f5 b db mb2">Nom<span className="normal white-80"></span></label>
                     <input className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
@@ -29,19 +30,23 @@ const Owner = () => {
                     <label className="f5 b db mb2">Pays<span className="normal white-80"></span></label>
                     <input className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                 </div>
-                <div className="pt3">
-                        <label className="db fw7 mb2">Type chambre</label>
 
-                        <input className="mr1" type="checkbox" id="single" value="single"></input>
-                        <label className="f6 fw7">Simple</label>
+                <h2 className="mt5">Prix / Nuit</h2>
 
-                        <input className="mr1 ml5" type="checkbox" id="double" value="double"></input>
-                        <label className="f6 fw7">Double</label>
-        
-                        <input className="ml5" type="checkbox" id="triple" value="triple"></input>
-                        <label className="f6 fw7">Triple</label>
+                <div className="pt1">
+                    <label className="f5 b db mb2"><span className="normal white-80">Chambre Simple</span></label>
+                    <input className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                 </div>
-            <a className="db w-50 mt5 mb3 center f4 pointer shadow-5 no-underline white hover-light-red pa3 ba border-box">
+                <div className="pt1">
+                    <label className="f5 b db mb2"><span className="normal white-80">Chambre Double</span></label>
+                    <input className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                </div>
+                <div className="pt1">
+                    <label className="f5 b db mb2"><span className="normal white-80">Chambre Triple</span></label>
+                    <input className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                </div>
+
+            <a className="db mt5 mb3 center f4 pointer shadow-5 no-underline white hover-light-red pa3 ba border-box">
                     <span className=""> => Souscrire</span>
             </a>
             </form>

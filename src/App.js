@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Components/Header/Header';
-import Searchbox from './Components/Searchbox/Searchbox';
-import Owner from './Components/Owner/Owner';
+import Main from './Components/Main/Main';
 import Footer from './Components/Footer/Footer';
 import './App.css';
 
@@ -30,13 +29,9 @@ class App extends Component {
 
   render() {
     return ( 
-      <div className="App">
-      <Header onPageChange={this.pageChanger}/>
-      {
-        this.state.page === 'home' 
-        ? <Searchbox onSearchChange={this.onSearchChange} />
-        : <Owner />
-      }
+      <div className="Appdiv">
+      <Header onPageChange={this.pageChanger} />
+      <Main page={this.state.page} onSearchChange={this.onSearchChange}/>
       <Footer />
       </div>
     );

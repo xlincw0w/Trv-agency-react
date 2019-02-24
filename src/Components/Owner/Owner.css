@@ -8,3 +8,17 @@
     border-color: #ff725c;
 }
 
+.mb3 {
+    width: 170px;
+    height: 60px;
+}
+
+.md1 {
+    width: 30vw;
+}
+
+@media only screen and (max-width: 1000px) {
+    .md1 {
+        width: 50vw;
+    }
+} 

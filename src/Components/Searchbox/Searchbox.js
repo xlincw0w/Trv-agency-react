@@ -4,9 +4,14 @@ import Submit from '../../Components/Submit/Submit';
 
 const Searchbox = ( {onSearchChange} ) => {
     return (
-        <div className="Searchbox mt6 tc">
-            <label htmlFor="name" className="f3 white b db mb2">Comparez les prix et trouvez votre hotel idéal.</label>
-            <input id="name" className="search f3 shadow-5 br2 h3 bg-transparent ba white pa2 mb2 w-50" type="text" placeholder='Destination...' onChange={onSearchChange}/>
+        <div className="Searchbox w-100 flex flex-wrap">
+            <h1 className="f3 white b w-100 mb0 tc">Comparez les prix et trouvez votre hotel idéal.</h1>
+            <input id="name" 
+                    className="md2 search center f3 shadow-5 br2 h3 mt3 bg-transparent ba white" 
+                    type="text" 
+                    placeholder='Destination...' 
+                    onChange={onSearchChange}
+            />
             <Submit />
         </div>
     )
