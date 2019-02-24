@@ -1,3 +1,7 @@
 .Header {
     height: 25vh;
 }
+
+.bnone {
+    border: none;
+}
