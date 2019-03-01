@@ -1,5 +1,7 @@
 # T-Agency version using reactjs framework
 
+# Note that you need to initialise a postgresql database
+# in order to get 100% working plateform.
 
 1. Clone this repo
 2. Run `npm install`
