@@ -2,17 +2,20 @@ import React from 'react';
 import Searchbox from '../Searchbox/Searchbox';
 import Owner from '../Owner/Owner';
 import Contact from '../Contact/Contact';
+import Result from '../Result/Result';
 import './Main.css';
 
-const Main = ( {page, onSearchChange} ) => {
+const Main = ( { OnSubmit, searchfield, page, onSearchChange} ) => {
     return (
     <div className="Main">
     {
     page === 'home' 
-        ? <Searchbox onSearchChange={onSearchChange} />
+        ? <Searchbox onSearchChange={onSearchChange} OnSubmit={OnSubmit} />
         : ( page ==='gerant'
             ? <Owner />
-            : <Contact />
+            : ( page === 'contact' 
+                ? <Contact />
+                : <Result searchfield={searchfield} /> )
         )
     }
     </div>
@@ -20,7 +23,3 @@ const Main = ( {page, onSearchChange} ) => {
 }
   
 export default Main;
-  
-  
-
-  

@@ -14,14 +14,20 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+    fetch('http://localhost:3010/')
+    .then(response => response.json())
+    .then(console.log);
+  }
+
   onSearchChange = (event) => {
     this.setState( {searchfield: event.target.value} )
-    console.log(this.state.searchfield);
   }
 
   OnSubmit = (event) => {
-    this.setState( {submited: true} )
+    this.pageChanger('result');
   }
+
 
   pageChanger = (input) => {
     this.setState( {page: input} )
@@ -31,7 +37,7 @@ class App extends Component {
     return ( 
       <div className="Appdiv">
       <Header onPageChange={this.pageChanger} />
-      <Main page={this.state.page} onSearchChange={this.onSearchChange}/>
+      <Main OnSubmit={this.OnSubmit} searchfield={this.state.searchfield} page={this.state.page} onSearchChange={this.onSearchChange}/>
       <Footer />
       </div>
     );
