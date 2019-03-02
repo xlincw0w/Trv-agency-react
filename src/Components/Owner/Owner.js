@@ -22,11 +22,12 @@ class Owner extends React.Component {
     }
 
     submited = () => {
+        const max_description_text_length = 150;
         const nom_rg = /^[A-Za-z]+$/;
         const prenom_rg = /^[A-Za-z ]+$/;
         const email_rg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         const hotel_rg = /^[A-Za-z0-9 ]+$/;
-        const description_rg = /^[A-Za-z0-9,. ]+$/;
+        const description_rg = /^[A-Za-z0-9',.!?éè ]+$/;
         const adresse_rg = /^[A-Za-z0-9 ]+$/;
         const pays_rg = /^[A-Za-z ]+$/;
         const region_rg = /^[A-Za-z ]+$/;
@@ -39,6 +40,7 @@ class Owner extends React.Component {
         else if(!prenom_rg.test(this.state.prenom)) { alert('Tapez correctement votre prenom !') }
         else if(!email_rg.test(this.state.email)) { alert('Tapez correctement votre email !') }
         else if(!hotel_rg.test(this.state.hotel)) { alert('Tapez correctement votre hotel !') }
+        else if(this.state.description.length > max_description_text_length) { alert('Description trop longue !') }
         else if(!description_rg.test(this.state.description)) { alert('Tapez correctement votre description !') }
         else if(!adresse_rg.test(this.state.adresse)) { alert('Tapez correctement votre adresse !') }
         else if(!pays_rg.test(this.state.pays)) { alert('Tapez correctement votre pays !') }

@@ -31,9 +31,7 @@ class Result extends React.Component {
 
         }
         return (
-            <div className="">
             <Showblock hotels={this.state.hotels}/>
-            </div>
         );
 
     }
