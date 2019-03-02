@@ -2,3 +2,7 @@
     width: 170px;
     height: 60px;
 }
+
+.Submit:hover {
+    border-color: #ff725c;
+}
