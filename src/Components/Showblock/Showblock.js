@@ -15,6 +15,7 @@ const Showblock = ( { hotels } ) => {
                     {hotels[i].description}
                     </p>
                     <h2 className="tc light-red f2">{hotels[i].prixsimple} DA / Nuit</h2>
+                    <h2 className="f4 bg-light-red white mv0 pv2 ph3 tc ttu tracked">Region : {hotels[i].region}</h2>
                 </div>
             </div>
         )
