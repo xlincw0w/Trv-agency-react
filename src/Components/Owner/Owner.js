@@ -125,6 +125,76 @@ class Owner extends React.Component {
         }
     }
 
+    greenify = (variable) => {
+        const nom_rg = /^[A-Za-z]+$/;
+        const prenom_rg = /^[A-Za-z ]+$/;
+        const email_rg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const hotel_rg = /^[A-Za-z0-9 ]+$/;
+        const description_rg = /^[A-Za-z0-9',.!?éè ]+$/;
+        const adresse_rg = /^[A-Za-z0-9 ]+$/;
+        const pays_rg = /^[A-Za-z ]+$/;
+        const region_rg = /^[A-Za-z ]+$/;
+        const nc_rg = /^[0-9]+$/;
+        const cs_rg = /^[0-9]+$/;
+        const cd_rg = /^[0-9]+$/;
+        const ct_rg = /^[0-9]+$/;
+
+        const styleToChange = {backgroundColor: 'rgb(255,255,255)'};
+        const defaultStyle = {backgroundColor: 'rgb(150,255,150,1)'};
+
+        switch (variable) {
+            case 'nom':
+                if(!nom_rg.test(this.state.nom)) { return ; } 
+                return defaultStyle;
+    
+            case 'prenom':
+                if(!prenom_rg.test(this.state.prenom)) { return styleToChange; } 
+                 return defaultStyle;
+          
+            case 'email':
+                if(!email_rg.test(this.state.email)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'hotel':
+                if(!hotel_rg.test(this.state.hotel)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'description':
+                if(!description_rg.test(this.state.description)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'adresse':
+                if(!adresse_rg.test(this.state.adresse)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'pays':
+                if(!pays_rg.test(this.state.pays)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'region':
+                if(!region_rg.test(this.state.region)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'nc':
+                if(!nc_rg.test(this.state.nc)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'cs':
+                if(!cs_rg.test(this.state.cs)) { return styleToChange; } 
+                return defaultStyle;
+            case 'cd':
+                if(!cd_rg.test(this.state.cd)) { return styleToChange; } 
+                return defaultStyle
+            case 'ct':
+                if(!ct_rg.test(this.state.ct)) { return styleToChange; } 
+                return defaultStyle;
+            default :
+                console.log('Error !');
+        }
+
+
+    }
+    
     render() {
 
         return (
@@ -132,54 +202,54 @@ class Owner extends React.Component {
                 <form className="pt3 Owner tc center white-80 md1">
                     <div className="pt1">
                         <label className="f5 b db mb2">Nom<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'nom')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'nom')} style={this.greenify('nom')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Prenom<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'prenom')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'prenom')} style={this.greenify('prenom')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Email<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'email')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'email')} style={this.greenify('email')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Hotel<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'hotel')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'hotel')} style={this.greenify('hotel')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Description<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'description')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'description')} style={this.greenify('description')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Adresse<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'adresse')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'adresse')} style={this.greenify('adresse')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Pays<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'pays')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'pays')} style={this.greenify('pays')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Region<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'region')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'region')} style={this.greenify('region')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Nombre de Chambres<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'nc')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'nc')} style={this.greenify('nc')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                     </div>
     
                     <h2 className="mt5">Prix / Nuit</h2>
     
                     <div className="pt1">
                         <label className="f5 b db mb2"><span className="normal white-80">Chambre Simple</span></label>
-                        <input onChange={this.onInput.bind(this, 'cs')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'cs')} style={this.greenify('cs')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2"><span className="normal white-80">Chambre Double</span></label>
-                        <input onChange={this.onInput.bind(this, 'cd')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'cd')} style={this.greenify('cd')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2"><span className="normal white-80">Chambre Triple</span></label>
-                        <input onChange={this.onInput.bind(this, 'ct')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'ct')} style={this.greenify('ct')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                     </div>
     
                 <button onClick={this.submited} className="db mt5 mb3 center f4 pointer shadow-5 no-underline white bg-transparent hover-light-red pa3 ba border-box">

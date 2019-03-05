@@ -33,11 +33,23 @@ class App extends Component {
     this.setState( {page: input} )
   }
 
+  cleanState = () => {
+    this.setState( {searchfield: '', page: 'home', submited: 'false'} )
+  }
+
   render() {
     return ( 
       <div className="Appdiv">
-      <Header onPageChange={this.pageChanger} />
-      <Main OnSubmit={this.OnSubmit} searchfield={this.state.searchfield} page={this.state.page} onSearchChange={this.onSearchChange}/>
+      <Header 
+        onPageChange={this.pageChanger}
+        cleanState={this.cleanState}
+      />
+      <Main 
+        OnSubmit={this.OnSubmit} 
+        searchfield={this.state.searchfield} 
+        page={this.state.page} 
+        onSearchChange={this.onSearchChange}
+        />
       <Footer />
       </div>
     );

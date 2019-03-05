@@ -8,7 +8,6 @@ class Result extends React.Component {
         this.state = {
             hotels: {}
         }
-    
     } 
 
     componentDidMount() {
@@ -27,13 +26,12 @@ class Result extends React.Component {
     render() {
 
         if (this.state.hotels.length === 0) {
-            return <h1 className="tc white">Pas d'hotel trouvé ... :'( </h1>
-
+            return <h1 className="tc white notfound f1">Pas d'hotel trouvé ... :'( </h1>
         }
+
         return (
             <Showblock hotels={this.state.hotels}/>
         );
-
     }
 }
 
