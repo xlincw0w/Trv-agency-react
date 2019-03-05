@@ -1,6 +1,7 @@
 .Submit {
     width: 170px;
     height: 60px;
+    transition-duration: 0.3s;
 }
 
 .Submit:hover {

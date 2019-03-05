@@ -1,3 +1,7 @@
+.forminp {
+    transition-duration: 1.8s;
+}
+
 .forminp:focus {
     outline: none;
     border-color: #ff725c;
@@ -10,6 +14,10 @@
 
 .md1 {
     width: 30vw;
+}
+
+.Souscrire {
+    transition-duration: 0.3s;
 }
 
 .Souscrire:hover {
