@@ -26,7 +26,7 @@ class Result extends React.Component {
     render() {
 
         if (this.state.hotels.length === 0) {
-            return <h1 className="tc white notfound f1">Pas d'hotel trouvé ... :'( </h1>
+            return <h1 className="tc white notfound f1">Aucun hotel trouvé ...</h1>
         }
 
         return (

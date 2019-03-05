@@ -252,7 +252,7 @@ class Owner extends React.Component {
                         <input onChange={this.onInput.bind(this, 'ct')} style={this.greenify('ct')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
                     </div>
     
-                <button onClick={this.submited} className="db mt5 mb3 center f4 pointer shadow-5 no-underline white bg-transparent hover-light-red pa3 ba border-box">
+                <button onClick={this.submited} className="db mt5 mb3 center f4 pointer shadow-5 no-underline white bg-transparent hover-light-red pa3 ba border-box fw8">
                     => Souscrire
                 </button>
                 </form>
