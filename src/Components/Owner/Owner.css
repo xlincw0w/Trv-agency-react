@@ -12,6 +12,10 @@
     width: 30vw;
 }
 
+.Souscrire:hover {
+    border-color: #ff725c;
+}
+
 @media only screen and (max-width: 1000px) {
     .md1 {
         width: 50vw;
