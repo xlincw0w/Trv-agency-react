@@ -68,7 +68,19 @@ class Owner extends React.Component {
                 nc: this.state.nc,
                 cs: this.state.cs,
                 cd: this.state.cd,
-                ct: this.state.ct
+                ct: this.state.ct,
+                show_nom_completed: false,
+                show_prenom_completed: false,
+                show_email_completed: false,
+                show_hotel_completed: false,
+                show_description_completed: false,
+                show_adresse_completed: false,
+                show_pays_completed: false,
+                show_region_completed: false,
+                show_nc_completed: false,
+                show_cs_completed: false,
+                show_cd_completed: false,
+                show_ct_completed: false
             })
         } )
     }
@@ -114,12 +126,15 @@ class Owner extends React.Component {
             case 'cs':
                 this.setState( { cs: event.target.value} )
                 break;
+
             case 'cd':
                 this.setState( { cd: event.target.value} )
                 break;
+
             case 'ct':
                 this.setState( { ct: event.target.value} )
                 break;
+
             default :
                 console.log('Error !');
         }
@@ -144,7 +159,7 @@ class Owner extends React.Component {
 
         switch (variable) {
             case 'nom':
-                if(!nom_rg.test(this.state.nom)) { return ; } 
+                if(!nom_rg.test(this.state.nom)) { return styleToChange; }
                 return defaultStyle;
     
             case 'prenom':
@@ -191,9 +206,76 @@ class Owner extends React.Component {
             default :
                 console.log('Error !');
         }
-
-
     }
+
+    whitify = (variable) => {
+        const nom_rg = /^[A-Za-z]+$/;
+        const prenom_rg = /^[A-Za-z ]+$/;
+        const email_rg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const hotel_rg = /^[A-Za-z0-9 ]+$/;
+        const description_rg = /^[A-Za-z0-9',.!?éè ]+$/;
+        const adresse_rg = /^[A-Za-z0-9 ]+$/;
+        const pays_rg = /^[A-Za-z ]+$/;
+        const region_rg = /^[A-Za-z ]+$/;
+        const nc_rg = /^[0-9]+$/;
+        const cs_rg = /^[0-9]+$/;
+        const cd_rg = /^[0-9]+$/;
+        const ct_rg = /^[0-9]+$/;
+
+        const styleToChange = {color: 'transparent'};
+        const defaultStyle = {color: 'rgb(255,255,255)'};
+
+        switch (variable) {
+            case 'nom':
+                if(!nom_rg.test(this.state.nom)) { return styleToChange; }
+                return defaultStyle;
+    
+            case 'prenom':
+                if(!prenom_rg.test(this.state.prenom)) { return styleToChange; } 
+                 return defaultStyle;
+          
+            case 'email':
+                if(!email_rg.test(this.state.email)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'hotel':
+                if(!hotel_rg.test(this.state.hotel)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'description':
+                if(!description_rg.test(this.state.description)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'adresse':
+                if(!adresse_rg.test(this.state.adresse)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'pays':
+                if(!pays_rg.test(this.state.pays)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'region':
+                if(!region_rg.test(this.state.region)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'nc':
+                if(!nc_rg.test(this.state.nc)) { return styleToChange; } 
+                return defaultStyle;
+          
+            case 'cs':
+                if(!cs_rg.test(this.state.cs)) { return styleToChange; } 
+                return defaultStyle;
+            case 'cd':
+                if(!cd_rg.test(this.state.cd)) { return styleToChange; } 
+                return defaultStyle
+            case 'ct':
+                if(!ct_rg.test(this.state.ct)) { return styleToChange; } 
+                return defaultStyle;
+            default :
+                console.log('Error !');
+        }
+    }
+
     
     render() {
 
@@ -202,54 +284,66 @@ class Owner extends React.Component {
                 <form className="pt3 Owner tc center white-80 md1">
                     <div className="pt1">
                         <label className="f5 b db mb2">Nom<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'nom')} style={this.greenify('nom')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'nom')} style={this.greenify('nom')} className="forminp bforminp ba b--white-20 pa2 mb2 w-90 w-90" type="text" />
+                        <span className="ml3 fw6 correct" style={this.whitify('nom')}>✓</span>
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Prenom<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'prenom')} style={this.greenify('prenom')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'prenom')} style={this.greenify('prenom')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
+                        <span className="ml3 fw6 correct" style={this.whitify('prenom')}>✓</span>
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Email<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'email')} style={this.greenify('email')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'email')} style={this.greenify('email')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
+                        <span className="ml3 fw6 correct" style={this.whitify('email')}>✓</span>
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Hotel<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'hotel')} style={this.greenify('hotel')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'hotel')} style={this.greenify('hotel')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
+                        <span className="ml3 fw6 correct" style={this.whitify('hotel')}>✓</span>
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Description<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'description')} style={this.greenify('description')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'description')} style={this.greenify('description')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
+                        <span className="ml3 fw6 correct" style={this.whitify('description')}>✓</span>
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Adresse<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'adresse')} style={this.greenify('adresse')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'adresse')} style={this.greenify('adresse')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
+                        <span className="ml3 fw6 correct" style={this.whitify('adresse')}>✓</span>
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Pays<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'pays')} style={this.greenify('pays')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'pays')} style={this.greenify('pays')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
+                        <span className="ml3 fw6 correct" style={this.whitify('pays')}>✓</span>
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Region<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'region')} style={this.greenify('region')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'region')} style={this.greenify('region')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
+                        <span className="ml3 fw6 correct" style={this.whitify('region')}>✓</span>
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2">Nombre de Chambres<span className="normal white-80"></span></label>
-                        <input onChange={this.onInput.bind(this, 'nc')} style={this.greenify('nc')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'nc')} style={this.greenify('nc')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
+                        <span className="ml3 fw6 correct" style={this.whitify('nc')}>✓</span>
                     </div>
     
                     <h2 className="mt5">Prix / Nuit</h2>
     
                     <div className="pt1">
                         <label className="f5 b db mb2"><span className="normal white-80">Chambre Simple</span></label>
-                        <input onChange={this.onInput.bind(this, 'cs')} style={this.greenify('cs')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'cs')} style={this.greenify('cs')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
+                        <span className="ml3 fw6 correct" style={this.whitify('cs')}>✓</span>
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2"><span className="normal white-80">Chambre Double</span></label>
-                        <input onChange={this.onInput.bind(this, 'cd')} style={this.greenify('cd')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'cd')} style={this.greenify('cd')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
+                        <span className="ml3 fw6 correct" style={this.whitify('cd')}>✓</span>
                     </div>
                     <div className="pt1">
                         <label className="f5 b db mb2"><span className="normal white-80">Chambre Triple</span></label>
-                        <input onChange={this.onInput.bind(this, 'ct')} style={this.greenify('ct')} className="forminp ba b--white-20 pa2 mb2 db w-100" type="text" />
+                        <input onChange={this.onInput.bind(this, 'ct')} style={this.greenify('ct')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
+                        <span className="ml3 fw6 correct" style={this.whitify('ct')}>✓</span>
                     </div>
     
                 <button onClick={this.submited} className="db mt5 mb3 center f4 pointer shadow-5 no-underline white bg-transparent hover-light-red pa3 ba border-box fw8 Souscrire">
