@@ -276,7 +276,6 @@ class Owner extends React.Component {
         }
     }
 
-    
     render() {
 
         return (
@@ -354,4 +353,5 @@ class Owner extends React.Component {
         );
     }
 }
+
 export default Owner;
