@@ -39,7 +39,7 @@ class App extends Component {
 
   render() {
     return ( 
-      <div className="Appdiv">
+      <div className="Appdiv bg-black-30">
       <Header 
         onPageChange={this.pageChanger}
         cleanState={this.cleanState}
