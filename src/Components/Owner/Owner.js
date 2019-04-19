@@ -285,55 +285,55 @@ class Owner extends React.Component {
                     <div className="pt3">
                         <label className="f5 b db mb2">Nom :<span className="normal white-80"></span></label>
                         <span className="pr3">➤</span>
-                        <input onChange={this.onInput.bind(this, 'nom')} style={this.greenify('nom')} className="forminp bforminp ba b--white-20 pa2 mb2 w-30-l w-50-m w-70" type="text" />
+                        <input onChange={this.onInput.bind(this, 'nom')} style={this.greenify('nom')} className="forminp bforminp ba b--white-20 pa2 mb2 w-40-l w-50-m w-70" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('nom')}>✓</span>
                     </div>
                     <div className="pt3">
                         <label className="f5 b db mb2">Prenom :<span className="normal white-80"></span></label>
                         <span className="pr3">➤</span>
-                        <input onChange={this.onInput.bind(this, 'prenom')} style={this.greenify('prenom')} className="forminp ba b--white-20 pa2 mb2 w-30-l w-50-m w-70" type="text" />
+                        <input onChange={this.onInput.bind(this, 'prenom')} style={this.greenify('prenom')} className="forminp ba b--white-20 pa2 mb2 w-40-l w-50-m w-70" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('prenom')}>✓</span>
                     </div>
                     <div className="pt3">
                         <label className="f5 b db mb2">Email :<span className="normal white-80"></span></label>
                         <span className="pr3">➤</span>
-                        <input onChange={this.onInput.bind(this, 'email')} style={this.greenify('email')} className="forminp ba b--white-20 pa2 mb2 w-30-l w-50-m w-70" type="text" />
+                        <input onChange={this.onInput.bind(this, 'email')} style={this.greenify('email')} className="forminp ba b--white-20 pa2 mb2 w-40-l w-50-m w-70" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('email')}>✓</span>
                     </div>
                     <div className="pt3">
                         <label className="f5 b db mb2">Hotel :<span className="normal white-80"></span></label>
                         <span className="pr3">➤</span>
-                        <input onChange={this.onInput.bind(this, 'hotel')} style={this.greenify('hotel')} className="forminp ba b--white-20 pa2 mb2 w-30-l w-50-m w-70" type="text" />
+                        <input onChange={this.onInput.bind(this, 'hotel')} style={this.greenify('hotel')} className="forminp ba b--white-20 pa2 mb2 w-40-l w-50-m w-70" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('hotel')}>✓</span>
                     </div>
                     <div className="pt3">
                         <label className="f5 b db mb2">Description :<span className="normal white-80"></span></label>
                         <span className="pr3">➤</span>
-                        <input onChange={this.onInput.bind(this, 'description')} style={this.greenify('description')} className="forminp ba b--white-20 pa2 mb2 w-30-l w-50-m w-70" type="text" />
+                        <input onChange={this.onInput.bind(this, 'description')} style={this.greenify('description')} className="forminp ba b--white-20 pa2 mb2 w-40-l w-50-m w-70" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('description')}>✓</span>
                     </div>
                     <div className="pt3">
                         <label className="f5 b db mb2">Adresse :<span className="normal white-80"></span></label>
                         <span className="pr3">➤</span>
-                        <input onChange={this.onInput.bind(this, 'adresse')} style={this.greenify('adresse')} className="forminp ba b--white-20 pa2 mb2 w-30-l w-50-m w-70" type="text" />
+                        <input onChange={this.onInput.bind(this, 'adresse')} style={this.greenify('adresse')} className="forminp ba b--white-20 pa2 mb2 w-40-l w-50-m w-70" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('adresse')}>✓</span>
                     </div>
                     <div className="pt3">
                         <label className="f5 b db mb2">Pays :<span className="normal white-80"></span></label>
                         <span className="pr3">➤</span>
-                        <input onChange={this.onInput.bind(this, 'pays')} style={this.greenify('pays')} className="forminp ba b--white-20 pa2 mb2 w-30-l w-50-m w-70" type="text" />
+                        <input onChange={this.onInput.bind(this, 'pays')} style={this.greenify('pays')} className="forminp ba b--white-20 pa2 mb2 w-40-l w-50-m w-70" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('pays')}>✓</span>
                     </div>
                     <div className="pt3">
                         <label className="f5 b db mb2">Region :<span className="normal white-80"></span></label>
                         <span className="pr3">➤</span>
-                        <input onChange={this.onInput.bind(this, 'region')} style={this.greenify('region')} className="forminp ba b--white-20 pa2 mb2 w-30-l w-50-m w-70" type="text" />
+                        <input onChange={this.onInput.bind(this, 'region')} style={this.greenify('region')} className="forminp ba b--white-20 pa2 mb2 w-40-l w-50-m w-70" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('region')}>✓</span>
                     </div>
                     <div className="pt3">
                         <label className="f5 b db mb2">Nombre de Chambres :<span className="normal white-80"></span></label>
                         <span className="pr3">➤</span>
-                        <input onChange={this.onInput.bind(this, 'nc')} style={this.greenify('nc')} className="forminp ba b--white-20 pa2 mb2 w-30-l w-50-m w-70" type="text" />
+                        <input onChange={this.onInput.bind(this, 'nc')} style={this.greenify('nc')} className="forminp ba b--white-20 pa2 mb2 w-40-l w-50-m w-70" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('nc')}>✓</span>
                     </div>
     
@@ -342,19 +342,19 @@ class Owner extends React.Component {
                     <div className="pt3">
                         <label className="f5 b db mb2"><span className="normal white-80">Chambre Simple :</span></label>
                         <span className="pr3">➤</span>
-                        <input onChange={this.onInput.bind(this, 'cs')} style={this.greenify('cs')} className="forminp ba b--white-20 pa2 mb2 w-30-l w-50-m w-70" type="text" />
+                        <input onChange={this.onInput.bind(this, 'cs')} style={this.greenify('cs')} className="forminp ba b--white-20 pa2 mb2 w-40-l w-50-m w-70" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('cs')}>✓</span>
                     </div>
                     <div className="pt3">
                         <label className="f5 b db mb2"><span className="normal white-80">Chambre Double :</span></label>
                         <span className="pr3">➤</span>
-                        <input onChange={this.onInput.bind(this, 'cd')} style={this.greenify('cd')} className="forminp ba b--white-20 pa2 mb2 w-30-l w-50-m w-70" type="text" />
+                        <input onChange={this.onInput.bind(this, 'cd')} style={this.greenify('cd')} className="forminp ba b--white-20 pa2 mb2 w-40-l w-50-m w-70" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('cd')}>✓</span>
                     </div>
                     <div className="pt3">
                         <label className="f5 b db mb2"><span className="normal white-80">Chambre Triple :</span></label>
                         <span className="pr3">➤</span>
-                        <input onChange={this.onInput.bind(this, 'ct')} style={this.greenify('ct')} className="forminp ba b--white-20 pa2 mb2 w-30-l w-50-m w-70" type="text" />
+                        <input onChange={this.onInput.bind(this, 'ct')} style={this.greenify('ct')} className="forminp ba b--white-20 pa2 mb2 w-40-l w-50-m w-70" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('ct')}>✓</span>
                     </div>
     
