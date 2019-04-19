@@ -279,50 +279,50 @@ class Owner extends React.Component {
     render() {
 
         return (
-            <div className="mt5 center tc w-75 bg-black-50 shadow-5 ba b--black">
+            <div className="contactdiv mt5 center tc w-75 shadow-5 ba b--black">
                 <form className="pt3 Owner tc center white-80 md1">
                     <div className="pt1">
-                        <label className="f5 b db mb2">Nom<span className="normal white-80"></span></label>
+                        <label className="f5 b db mb2">Nom :<span className="normal white-80"></span></label>
                         <input onChange={this.onInput.bind(this, 'nom')} style={this.greenify('nom')} className="forminp bforminp ba b--white-20 pa2 mb2 w-90 w-90" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('nom')}>✓</span>
                     </div>
                     <div className="pt1">
-                        <label className="f5 b db mb2">Prenom<span className="normal white-80"></span></label>
+                        <label className="f5 b db mb2">Prenom :<span className="normal white-80"></span></label>
                         <input onChange={this.onInput.bind(this, 'prenom')} style={this.greenify('prenom')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('prenom')}>✓</span>
                     </div>
                     <div className="pt1">
-                        <label className="f5 b db mb2">Email<span className="normal white-80"></span></label>
+                        <label className="f5 b db mb2">Email :<span className="normal white-80"></span></label>
                         <input onChange={this.onInput.bind(this, 'email')} style={this.greenify('email')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('email')}>✓</span>
                     </div>
                     <div className="pt1">
-                        <label className="f5 b db mb2">Hotel<span className="normal white-80"></span></label>
+                        <label className="f5 b db mb2">Hotel :<span className="normal white-80"></span></label>
                         <input onChange={this.onInput.bind(this, 'hotel')} style={this.greenify('hotel')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('hotel')}>✓</span>
                     </div>
                     <div className="pt1">
-                        <label className="f5 b db mb2">Description<span className="normal white-80"></span></label>
+                        <label className="f5 b db mb2">Description :<span className="normal white-80"></span></label>
                         <input onChange={this.onInput.bind(this, 'description')} style={this.greenify('description')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('description')}>✓</span>
                     </div>
                     <div className="pt1">
-                        <label className="f5 b db mb2">Adresse<span className="normal white-80"></span></label>
+                        <label className="f5 b db mb2">Adresse :<span className="normal white-80"></span></label>
                         <input onChange={this.onInput.bind(this, 'adresse')} style={this.greenify('adresse')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('adresse')}>✓</span>
                     </div>
                     <div className="pt1">
-                        <label className="f5 b db mb2">Pays<span className="normal white-80"></span></label>
+                        <label className="f5 b db mb2">Pays :<span className="normal white-80"></span></label>
                         <input onChange={this.onInput.bind(this, 'pays')} style={this.greenify('pays')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('pays')}>✓</span>
                     </div>
                     <div className="pt1">
-                        <label className="f5 b db mb2">Region<span className="normal white-80"></span></label>
+                        <label className="f5 b db mb2">Region :<span className="normal white-80"></span></label>
                         <input onChange={this.onInput.bind(this, 'region')} style={this.greenify('region')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('region')}>✓</span>
                     </div>
                     <div className="pt1">
-                        <label className="f5 b db mb2">Nombre de Chambres<span className="normal white-80"></span></label>
+                        <label className="f5 b db mb2">Nombre de Chambres :<span className="normal white-80"></span></label>
                         <input onChange={this.onInput.bind(this, 'nc')} style={this.greenify('nc')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('nc')}>✓</span>
                     </div>
@@ -330,24 +330,25 @@ class Owner extends React.Component {
                     <h2 className="mt5">Prix / Nuit</h2>
     
                     <div className="pt1">
-                        <label className="f5 b db mb2"><span className="normal white-80">Chambre Simple</span></label>
+                        <label className="f5 b db mb2"><span className="normal white-80">Chambre Simple :</span></label>
                         <input onChange={this.onInput.bind(this, 'cs')} style={this.greenify('cs')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('cs')}>✓</span>
                     </div>
                     <div className="pt1">
-                        <label className="f5 b db mb2"><span className="normal white-80">Chambre Double</span></label>
+                        <label className="f5 b db mb2"><span className="normal white-80">Chambre Double :</span></label>
                         <input onChange={this.onInput.bind(this, 'cd')} style={this.greenify('cd')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('cd')}>✓</span>
                     </div>
                     <div className="pt1">
-                        <label className="f5 b db mb2"><span className="normal white-80">Chambre Triple</span></label>
+                        <label className="f5 b db mb2"><span className="normal white-80">Chambre Triple :</span></label>
                         <input onChange={this.onInput.bind(this, 'ct')} style={this.greenify('ct')} className="forminp ba b--white-20 pa2 mb2 w-90" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('ct')}>✓</span>
                     </div>
     
-                <button onClick={this.submited} className="db mt5 mb3 center f4 pointer shadow-5 no-underline white bg-transparent hover-light-red pa3 ba border-box fw8 Souscrire">
+                <button onClick={this.submited} className="sousbord db mt5 mb4 center f4 pointer shadow-5 no-underline white bg-transparent hover-light-red pa3 ba border-box fw8 Souscrire sousbord">
                     => Souscrire
                 </button>
+                <p className="white f1 p2">❖</p>
                 </form>
             </div>
         );

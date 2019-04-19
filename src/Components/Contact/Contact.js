@@ -3,7 +3,7 @@ import './Contact.css';
 
 const Contact = ( {onPageChange} ) => {
     return (
-    <div className="Contact w-75 h-50 db center tc bg-white-20 ba b--black">
+    <div className="contact mt5 w-75 h-50 db center tc ba b--black">
         <h1 className="light-red db mb5 pt5">Nous Contacter :</h1>
         <div className="white">
         <h2>Plateform web developper pour un project mémoire  !</h2>

@@ -8,7 +8,8 @@ input::placeholder {
 
 .search:focus {
     outline: none;
-    border-color: #ff725c;
+    border-image: linear-gradient(to right, #ff4e33 0%,#ff4e33 100%);
+    border-image-slice: 1;
 }
 
 .Searchbox {
@@ -23,7 +24,6 @@ input::placeholder {
     border-image: linear-gradient(to right, #ff4e33 0%,#ffffff 100%);
     border-image-slice: 1;
 }
-
 
 @media only screen and (max-width: 1000px) {
     .md2 {

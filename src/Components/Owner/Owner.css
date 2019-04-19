@@ -16,12 +16,14 @@
     width: 30vw;
 }
 
-.Souscrire {
-    transition-duration: 0.3s;
+.contactdiv {
+    background-color: rgb(255, 78, 51, 0.2);
 }
 
-.Souscrire:hover {
-    border-color: #ff725c;
+.Souscrire {
+    transition-duration: 0.3s;
+    border-image: linear-gradient(to right, #ff4e33 0%,#ffffff 100%);
+    border-image-slice: 1;
 }
 
 .correct {
