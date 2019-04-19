@@ -28,7 +28,6 @@ class App extends Component {
     this.pageChanger('result');
   }
 
-
   pageChanger = (input) => {
     this.setState( {page: input} )
   }

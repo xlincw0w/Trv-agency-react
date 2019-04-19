@@ -1,3 +1,8 @@
+@font-face {
+    src: url('./Fonts/OpenSans-Regular.ttf');
+    font-family: OpenSans;
+}
+
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: OpenSans, 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
 }
