@@ -19,6 +19,12 @@ input::placeholder {
     width: 50vw;
 }
 
+.sboxAnim {
+    border-image: linear-gradient(to right, #ff4e33 0%,#ffffff 100%);
+    border-image-slice: 1;
+}
+
+
 @media only screen and (max-width: 1000px) {
     .md2 {
         width: 70vw;

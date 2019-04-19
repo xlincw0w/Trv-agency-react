@@ -6,3 +6,30 @@
 .bnone {
     border: none;
 }
+
+.divtoanimate {
+    animation: infinite;
+    animation-name: animation;
+    animation-duration: 3s;
+    animation-direction: normal;
+}
+
+.textanimation {
+    animation: infinite;
+    animation-name: animationText;
+    animation-duration: 3s;
+    animation-direction: normal; 
+}
+
+@keyframes animation {
+    0%  {border-color:#ffffff;}
+    50%  {border-color:#ff725c;}
+    100% {border-color:#ffffff;}
+ 
+}
+
+@keyframes animationText {
+    0%  {color:#ffffff;}
+    50%  {color:#ff725c;}
+    100% {color:#ffffff;}
+}

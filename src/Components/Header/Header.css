@@ -5,3 +5,8 @@
 .bnone {
     border: none;
 }
+
+.blogo {
+    border-image: linear-gradient(to right, #ff4e33 0%,#ffffff 100%);
+    border-image-slice: 1;
+}
