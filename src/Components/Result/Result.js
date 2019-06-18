@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Result.css';
 import Showblock from '../Showblock/Showblock';
 
-class Result extends React.Component {
+class Result extends Component {
     constructor(props) {
         super(props);
         this.state = {

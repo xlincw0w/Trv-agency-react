@@ -1,25 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
+import '../Reserve/Reserve';
 import './Showblock.css';
+import Block from '../Block/Block';
+import Reserve from '../Reserve/Reserve';
 
-const Showblock = ( { hotels } ) => {
-    let arr = []
-    for (let elem in hotels) {
-        arr.push({elem: hotels[elem]})
+class Showblock extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            render: 'base',
+            hotel: {}
+        }
     }
-    return  arr.map((elem, i) => {
-        return (
-            <div key={i} className="showblock bg-white-80 center hidden ba pointer grow">
-                <h1 className="f4 bg-near-black white mv0 pv2 ph3 tc ttu tracked">{hotels[i].hotel}</h1>
-                <div className="pa3 bt bg-white">
-                    <p className="showblockdiv f6 f5-ns lh-copy center tc measure black mv0">
-                    {hotels[i].description}
-                    </p>
-                    <h2 className="tc light-red f2">{hotels[i].prixsimple} DA / Nuit</h2>
-                    <h2 className="f4 bg-light-red white mv0 pv2 ph3 tc ttu tracked">Region : {hotels[i].region}</h2>
-                </div>
-            </div>
+
+    PopReserve = (val) => {
+        this.setState({render: 'reserve', hotel:val});
+    }
+
+    BackFunction = () => {
+        this.setState({render: 'base', hotel:{}});
+    }
+
+
+    render() {
+        return(
+        <div>
+            <Reserve 
+            BackFunction={this.BackFunction}
+            render={this.state.render}
+            hotel={this.state.hotel}
+            />
+            <Block 
+            hotels={this.props.hotels}
+            PopReserve={this.PopReserve}
+            />
+        </div>
         )
-    })
+    }
 }
     
     

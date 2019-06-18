@@ -69,18 +69,6 @@ class Owner extends React.Component {
                 cs: this.state.cs,
                 cd: this.state.cd,
                 ct: this.state.ct,
-                show_nom_completed: false,
-                show_prenom_completed: false,
-                show_email_completed: false,
-                show_hotel_completed: false,
-                show_description_completed: false,
-                show_adresse_completed: false,
-                show_pays_completed: false,
-                show_region_completed: false,
-                show_nc_completed: false,
-                show_cs_completed: false,
-                show_cd_completed: false,
-                show_ct_completed: false
             })
         } )
     }
