@@ -3,9 +3,10 @@ import Searchbox from '../Searchbox/Searchbox';
 import Owner from '../Owner/Owner';
 import Contact from '../Contact/Contact';
 import Result from '../Result/Result';
+import Administator from '../Administator/Administator';
 import './Main.css';
 
-const Main = ( { OnSubmit, searchfield, page, onSearchChange} ) => {
+const Main = ( { OnSubmit, searchfield, page, onPageChange, connectionHandler, onSearchChange, connected} ) => {
     return (
     <div className="Main">
     {
@@ -15,8 +16,10 @@ const Main = ( { OnSubmit, searchfield, page, onSearchChange} ) => {
             ? <Owner />
             : ( page === 'contact' 
                 ? <Contact />
-                : <Result searchfield={searchfield} /> )
-        )
+                : ( page === 'result' 
+                    ? <Result searchfield={searchfield} /> 
+                    : <Administator onPageChange={onPageChange} connectionHandler={connectionHandler} connected={connected} /> 
+        )))
     }
     </div>
     );

@@ -10,7 +10,9 @@ class App extends Component {
     this.state = {
       searchfield: '',
       page: 'home',
-      submited: false
+      submited: false,
+      connected: false,
+      username: '',
     }
   }
 
@@ -32,6 +34,11 @@ class App extends Component {
     this.setState( {page: input} )
   }
 
+  connectionHandler = (username, data) => {
+    if (data.connected) this.setState({ connected: true, username: username });
+    else alert('Invalid password');
+  }
+
   cleanState = () => {
     this.setState( {searchfield: '', page: 'home', submited: 'false'} )
   }
@@ -42,12 +49,17 @@ class App extends Component {
       <Header 
         onPageChange={this.pageChanger}
         cleanState={this.cleanState}
+        connected={this.state.connected}
+        username={this.state.username}
       />
       <Main 
         OnSubmit={this.OnSubmit} 
         searchfield={this.state.searchfield} 
         page={this.state.page} 
+        onPageChange={this.pageChanger}
+        connectionHandler={this.connectionHandler}
         onSearchChange={this.onSearchChange}
+        connected={this.state.connected}
         />
       <Footer />
       </div>

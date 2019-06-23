@@ -1,0 +1,35 @@
+.maindiv{
+    padding: 0;
+    display: flex;
+    width: 800px;
+    height: 100px;  
+}
+
+.hotelname {
+    flex-basis: 20%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.ownersname {
+    flex-basis: 20%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.addr {
+    flex-basis: 20%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.buttons {
+    flex-basis: 40%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.adminButton {
+    width: 100px;
+    height: 40px;
+}
