@@ -6,7 +6,7 @@ import Result from '../Result/Result';
 import Administator from '../Administator/Administator';
 import './Main.css';
 
-const Main = ( { OnSubmit, searchfield, page, onPageChange, connectionHandler, onSearchChange, connected} ) => {
+const Main = ( { OnSubmit, searchfield, page, onPageChange, connectionHandler, disconnect, onSearchChange, connected} ) => {
     return (
     <div className="Main">
     {
@@ -18,7 +18,7 @@ const Main = ( { OnSubmit, searchfield, page, onPageChange, connectionHandler, o
                 ? <Contact />
                 : ( page === 'result' 
                     ? <Result searchfield={searchfield} /> 
-                    : <Administator onPageChange={onPageChange} connectionHandler={connectionHandler} connected={connected} /> 
+                    : <Administator onPageChange={onPageChange} connectionHandler={connectionHandler} connected={connected} disconnect={disconnect}/> 
         )))
     }
     </div>

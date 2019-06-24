@@ -319,7 +319,8 @@ class Owner extends React.Component {
                         <span className="ml3 fw6 correct" style={this.whitify('region')}>✓</span>
                     </div>
                     <div className="pt3">
-                        <label className="f5 b db mb2">Nombre de Chambres :<span className="normal white-80"></span></label>
+                        <label 
+                        className="f5 b db mb2">Nombre de Chambres :<span className="normal white-80"></span></label>
                         <span className="pr3">➤</span>
                         <input onChange={this.onInput.bind(this, 'nc')} style={this.greenify('nc')} className="forminp ba b--white-20 pa2 mb2 w-40-l w-50-m w-70" type="text" />
                         <span className="ml3 fw6 correct" style={this.whitify('nc')}>✓</span>
