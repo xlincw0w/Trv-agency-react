@@ -92,7 +92,7 @@ class Administrator extends Component {
                     <main className="pa4 black-80">
                         <div className="measure center">
                             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                            <legend className="f3 light-red fw6 ph0 mh0">Connexion Administateur :</legend>
+                            <legend className="light-red fw6 ph0 mh0 legendres">Connexion Administateur :</legend>
                             <div className="mt3">
                                 <label className="db fw6 lh-copy f6 light-red">Username</label>
                                 <input onChange={this.onInput.bind(this, 'username')} className="pa2 input-reset ba bg-transparent hover-black w-100" type="text"/>

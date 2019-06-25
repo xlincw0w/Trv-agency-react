@@ -5,6 +5,18 @@
     height: 100px;
 }
 
+.fontmediahotel {
+    font-size: 20px;
+}
+
+.fontmedianame {
+    font-size: 20px;    
+}
+
+.fontmediaregion {
+    font-size: 20px;
+}
+
 .hotelname {
     flex-basis: 20%;
     width: 100vw;
@@ -32,4 +44,42 @@
 .adminButton {
     width: 100px;
     height: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+    .maindiv {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .maindiv {
+        width: 400px;
+    }
+
+    .adminButton {
+        width: 80;
+    }
+
+    .mrtop {
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .maindiv {
+        width: 300px;
+    }
+
+    .fontmediahotel {
+        font-size: 14px;
+    }
+
+    .fontmedianame {
+        font-size: 14px;
+    }
+
+    .fontmediaregion {
+        font-size: 14px;
+    }
 }

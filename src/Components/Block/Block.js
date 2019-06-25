@@ -8,8 +8,6 @@ const Block = ( { hotels, PopReserve } ) => {
             arr.push({elem: hotels[elem]})
             }
 
-            console.log(hotels);
-
             return arr.map((elem, i) => {
                 let hotel = elem.elem;  
                 return (

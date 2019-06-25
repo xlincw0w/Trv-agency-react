@@ -53,6 +53,32 @@ class Reserve extends Component {
             }
         }
 
+        whitify = (variable) => {
+            const nom_rg = /^[A-Za-z]+$/;
+            const prenom_rg = /^[A-Za-z ]+$/;
+            const email_rg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+            const styleToChange = {color: 'transparent'};
+            const defaultStyle = {color: 'rgb(255,0,0)'};
+    
+            switch (variable) {
+                case 'nom':
+                    if(!nom_rg.test(this.state.nom)) { return styleToChange; }
+                    return defaultStyle;
+        
+                case 'prenom':
+                    if(!prenom_rg.test(this.state.prenom)) { return styleToChange; } 
+                     return defaultStyle;
+              
+                case 'email':
+                    if(!email_rg.test(this.state.email)) { return styleToChange; } 
+                    return defaultStyle;
+              
+                default :
+                    console.log('Error !');
+            }
+        }
+
     registerToDBReservation = (event) => {
         if (new Date(this.state.date_debut) <= new Date() || this.state.date_debut >= this.state.date_fin) {
             alert('Date non valide');
@@ -97,23 +123,26 @@ class Reserve extends Component {
     
                         <div className="mt3">
                             <label className="light-red db fw6 lh-copy f6" >Nom</label>
-                            <input onChange={this.onInput.bind(this, 'nom')} className="pa2 input-reset ba bg-transparent hover-black w-100" type="text" />
+                            <input onChange={this.onInput.bind(this, 'nom')} className="pa2 input-reset di ba bg-transparent hover-black w-80" type="text" />
+                            <span className="ml3 fw6 correct" style={this.whitify('nom')}>✓</span>
                         </div>
                         <div className="mt3">
                             <label className="light-red db fw6 lh-copy f6" >Prenom</label>
-                            <input onChange={this.onInput.bind(this, 'prenom')} className="pa2 input-reset ba bg-transparent hover-black w-100" type="text" />
+                            <input onChange={this.onInput.bind(this, 'prenom')} className="pa2 input-reset ba bg-transparent hover-black w-80" type="text" />
+                            <span className="ml3 fw6 correct" style={this.whitify('prenom')}>✓</span>
                         </div>
                         <div className="mt3">
                             <label className="light-red db fw6 lh-copy f6" >E-mail</label>
-                            <input onChange={this.onInput.bind(this, 'mail')} className="pa2 input-reset ba bg-transparent hover-black w-100" type="email" />
+                            <input onChange={this.onInput.bind(this, 'mail')} className="pa2 input-reset ba bg-transparent hover-black w-80" type="email" />
+                            <span className="ml3 fw6 correct" style={this.whitify('email')}>✓</span>
                         </div>
                         <div className="mt3">
                             <label className="light-red db fw6 lh-copy f6" >Date debut</label>
-                            <input onChange={this.onInput.bind(this, 'dd')} className="pa2 input-reset ba bg-transparent hover-black w-100" type="date" />
+                            <input onChange={this.onInput.bind(this, 'dd')} className="pa2 input-reset ba bg-transparent hover-black w-80" type="date" />
                         </div>
                         <div className="mt3">
                             <label className="light-red db fw6 lh-copy f6" >Date Fin</label>
-                            <input onChange={this.onInput.bind(this, 'df')} className="pa2 input-reset ba bg-transparent hover-black w-100" type="date" />
+                            <input onChange={this.onInput.bind(this, 'df')} className="pa2 input-reset ba bg-transparent hover-black w-80" type="date" />
                         </div>
                         <div className="mt3">
                             <label className="light-red db fw6 lh-copy f6" >Type chambre</label>

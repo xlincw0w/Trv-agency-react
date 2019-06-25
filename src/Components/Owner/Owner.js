@@ -21,7 +21,7 @@ class Owner extends React.Component {
         }
     }
 
-    submited = () => {
+        submited = () => {
         const max_description_text_length = 150;
         const nom_rg = /^[A-Za-z]+$/;
         const prenom_rg = /^[A-Za-z ]+$/;
