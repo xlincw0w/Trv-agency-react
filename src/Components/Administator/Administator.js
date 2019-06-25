@@ -40,6 +40,7 @@ class Administrator extends Component {
         }
     }
 
+    // Envoie de requete vers le server
     connexion = (event) => {
         let password = crypto.AES.encrypt(this.state.password, this.state.AESEncrytpion).toString();
         fetch('http://localhost:3010/admin', {
@@ -55,6 +56,7 @@ class Administrator extends Component {
         .catch(err => console.log('Erreur de connexion'));
     }
 
+    // Récupération des hotels non confirmé 
     getunconfirmedHotels = () => {
         this.setState( { connected: true } )
         fetch('http://localhost:3010/unconfirmed')
@@ -72,6 +74,7 @@ class Administrator extends Component {
         else return '';
     }
 
+    // Déconnexion de l'admin
     disconnect = () => {
         this.setState({ connected: false, hotels: [] });
         this.props.disconnect();

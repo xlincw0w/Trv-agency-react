@@ -6,6 +6,7 @@ import Result from '../Result/Result';
 import Administator from '../Administator/Administator';
 import './Main.css';
 
+// Différent composant de la page principale
 const Main = ( { OnSubmit, searchfield, page, onPageChange, connectionHandler, disconnect, onSearchChange, connected} ) => {
     return (
     <div className="Main">

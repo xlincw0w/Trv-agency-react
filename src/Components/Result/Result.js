@@ -10,6 +10,7 @@ class Result extends Component {
         }
     } 
 
+    // Envoie de requete vers le server accompagné de la destination saisie
     componentDidMount() {
         fetch('http://localhost:3010/search', {
             method: 'post',

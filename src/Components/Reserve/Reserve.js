@@ -8,7 +8,6 @@ import DialogContent from '@material-ui/core/DialogContent';
 
 
 class Reserve extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -21,6 +20,7 @@ class Reserve extends Component {
         }
     }
 
+    // Sauvegarde des données saisie
     onInput = (variable, event) => {
         switch (variable) {
             case 'nom':
@@ -53,6 +53,7 @@ class Reserve extends Component {
             }
         }
 
+        // Ergonomie de saisie
         whitify = (variable) => {
             const nom_rg = /^[A-Za-z]+$/;
             const prenom_rg = /^[A-Za-z ]+$/;
@@ -79,6 +80,7 @@ class Reserve extends Component {
             }
         }
 
+    // Envoie de requete vers le server avec les données saisie
     registerToDBReservation = (event) => {
         if (new Date(this.state.date_debut) <= new Date() || this.state.date_debut >= this.state.date_fin) {
             alert('Date non valide');
@@ -97,7 +99,6 @@ class Reserve extends Component {
                 })
             } )
         }
-
     }
 
 

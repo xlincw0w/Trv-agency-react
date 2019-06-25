@@ -2,7 +2,6 @@ import React from 'react';
 import './Owner.css';
 
 class Owner extends React.Component {
-    
     constructor(props) {
         super(props);
         this.state = {
@@ -21,6 +20,7 @@ class Owner extends React.Component {
         }
     }
 
+        // Verification de tout les données saisie
         submited = () => {
         const max_description_text_length = 150;
         const nom_rg = /^[A-Za-z]+$/;
@@ -52,6 +52,7 @@ class Owner extends React.Component {
         else { this.registerToDB() }
     }
 
+    // Envoie de requete vers le server accompagné de tout les données saisie 
     registerToDB = (event) => {
         fetch('http://localhost:3010/owner', {
             method: 'post',
@@ -73,6 +74,7 @@ class Owner extends React.Component {
         } )
     }
 
+    // Sauvegarde des données saisie
     onInput = (variable, event) => {
         switch (variable) {
             case 'nom':
@@ -128,6 +130,7 @@ class Owner extends React.Component {
         }
     }
 
+    // Ergonomie de saisie
     greenify = (variable) => {
         const nom_rg = /^[A-Za-z]+$/;
         const prenom_rg = /^[A-Za-z ]+$/;
@@ -196,6 +199,7 @@ class Owner extends React.Component {
         }
     }
 
+    // Ergonomie de saisie
     whitify = (variable) => {
         const nom_rg = /^[A-Za-z]+$/;
         const prenom_rg = /^[A-Za-z ]+$/;

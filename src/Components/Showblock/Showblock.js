@@ -21,7 +21,6 @@ class Showblock extends Component{
         this.setState({render: 'base', hotel:{}});
     }
 
-
     render() {
         return(
         <div>

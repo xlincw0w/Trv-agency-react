@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button';
 import './Unconfirmed.css';
 
 
+// Handler cas confirmation d'hotel
 const confirmHandler = (id, i, event) => {
         fetch('http://localhost:3010/confirm', {
             method: 'post',
@@ -14,6 +15,7 @@ const confirmHandler = (id, i, event) => {
         }).then(hide(i));
 }
 
+// Handler cas rejet d'hotel
 const rejectHandler = (id, i, event) => {
         fetch('http://localhost:3010/confirm', {
             method: 'post',
