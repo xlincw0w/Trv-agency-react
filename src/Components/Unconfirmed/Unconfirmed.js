@@ -32,7 +32,7 @@ const hide = (val) => {
 
 const Unconfirmed = ( { hotels }) => {
     return hotels.map((elem, i) => {
-        return (<div key={i} id={i} className="maindiv white tc center mt5 sboxAnim Submit bg-transparent shadow-5 ba">
+        return (<div key={i} id={i} className="maindiv white tc center sboxAnim Submit bg-transparent shadow-5 ba unconmedia">
             <div className="hotelname w-100 h-100 dt">
                 <h1 className="dtc v-mid ttu fontmediahotel">{elem.hotel}</h1>
             </div>

@@ -5,6 +5,10 @@
     height: 100px;
 }
 
+.unconmedia {
+    margin-top: 10vh;
+}
+
 .fontmediahotel {
     font-size: 20px;
 }
@@ -81,5 +85,19 @@
 
     .fontmediaregion {
         font-size: 14px;
+    }
+}
+
+
+
+@media only screen and (max-height: 520px) {
+    .unconmedia {
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (max-height: 380px) {
+    .unconmedia {
+        margin-top: 120px;
     }
 }
